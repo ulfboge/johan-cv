@@ -82,9 +82,8 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      background-image: url('portrait.jpg');
-      background-size: cover;
-      background-position: center;
+      object-fit: cover; /* Nyckel-egenskap för att passa bilden i ramen */
+      object-position: center; /* Centrerar bilden */
       flex-shrink: 0;
       border: 3px solid var(--card);
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -150,7 +149,7 @@
     @media (min-width: 768px) {
       .grid-2 { grid-template-columns: 1fr 1fr; }
       .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-      .grid-4 { grid-template-columns: 1fr 1fr; }
+      .grid-4 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
       .hero { flex-direction: row; text-align: left; }
       .hero-text { margin-top: 0; margin-left: 2rem; }
       .cta { justify-content: flex-start; }
@@ -196,7 +195,7 @@
   <div class="container">
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="profile-picture"></div>
+        <img class="profile-picture" src="portrait.jpg" alt="Porträttbild av Johan Karlsson">
         <div class="hero-text">
           <h1 id="hero-title">Johan Karlsson</h1>
           <p class="meta">GIS-konsult med specialistkompetens inom geodataanalys</p>
@@ -214,7 +213,7 @@
 
       <section id="erfarenhet" aria-labelledby="erfarenhet-title">
         <h2 id="erfarenhet-title">Erfarenhet</h2>
-        <div class="grid-4">
+        <div class="grid-2">
           <div>
             <h3>Earth Observation Specialist</h3>
             <p class="meta">KAYA Global, Distans | 2025-01 – Nuvarande</p>
