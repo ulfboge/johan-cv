@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Johan Karlsson – CV | GIS-konsult & Earth Observation Specialist</title>
+  <meta name="description" content="CV för Johan Karlsson. GIS-konsult & Earth Observation Specialist. Geodataanalys, QGIS, Google Earth Engine, Python.">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:title" content="Johan Karlsson – GIS-konsult & Earth Observation Specialist">
+  <meta property="og:description" content="Snabb, tillgänglig CV-sida för Johan Karlsson.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ulfboge.github.io/johan-cv/">
+  <meta property="og:image" content="DATA_URI_EMBEDDED_HERE">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    /* --- Hur du uppdaterar ---
+       1) Byt färger i :root.
+       2) Uppdatera texterna i respektive <section>.
+       3) Lägg till fler case/omdömen och ändra länkar i footer + JSON-LD.
+    */
+    :root {
+      --primary: #4a4a4a;      /* sober grå */
+      --accent: #2b7a78;       /* diskret accent */
+      --bg: #f7f7f8;
+      --text: #1b1f23;
+      --muted: #666;
+      --card: #ffffff;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --text: #e7e9ee;
+        --card: #151922;
+        --muted: #a1a6b3;
+      }
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin:0; font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: var(--bg); color: var(--text);
+    }
+    a { color: var(--accent); text-underline-offset: 2px; }
+    a:focus, button:focus { outline: 3px solid var(--accent); outline-offset: 2px; }
+    header { background: var(--card); position: sticky; top:0; z-index:10; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 1rem; }
+    nav ul { display:flex; gap:.75rem; list-style:none; padding:0; margin:0; flex-wrap: wrap; }
+    nav a { padding:.5rem .75rem; border-radius: .6rem; display:inline-block; }
+    nav a:hover { background: rgba(127,127,127,.08); }
+    .skip { position:absolute; left:-9999px; }
+    .skip:focus { left:1rem; top:1rem; background:#fff; padding:.5rem; z-index:20; }
+    .hero { display:grid; gap:1rem; grid-template-columns: 120px 1fr; align-items:center; padding: 1.25rem 0; }
+    .hero img { width:120px; height:120px; border-radius: 50%; object-fit: cover; }
+    .cta { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:.35rem; }
+    .btn { background: var(--text); color:#fff; border:0; padding:.6rem .9rem; border-radius:.7rem; cursor:pointer; text-decoration:none; }
+    .btn.secondary { background: transparent; color: var(--text); border:1px solid var(--muted); }
+    main section { background: var(--card); margin:1rem 0; padding:1rem; border-radius: var(--radius); }
+    h1 { font-size: clamp(1.6rem, 3vw, 2rem); margin:.2rem 0; }
+    h2 { font-size: 1.25rem; margin: .2rem 0 .75rem; }
+    h3 { margin:.4rem 0 .1rem; font-size:1rem; }
+    .grid-2 { display:grid; gap:1rem; grid-template-columns: 1fr; }
+    @media (min-width: 820px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+    ul.clean { padding-left:1.1rem; }
+    .meta { color: var(--muted); font-size:.95rem; }
+    .tag { display:inline-block; border:1px solid var(--muted); padding:.15rem .45rem; border-radius:999px; margin:.15rem .25rem 0 0; font-size:.85rem; }
+    footer { color: var(--muted); padding:2rem 0; }
+    /* Print styles */
+    @media print {
+      header, .no-print { display:none !important; }
+      body { background:#fff; }
+      main section { break-inside: avoid; box-shadow:none; border:0; }
+      @page { size: A4; margin: 14mm; }
+    }
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition:none !important; } }
+  </style>
+</head>
+<body>
+<a class="skip" href="#content">Hoppa till innehåll</a>
+<header role="banner" aria-label="Primär navigation">
+  <div class="wrap">
+    <nav aria-label="Huvudnavigation">
+      <ul>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#erfarenhet">Erfarenhet</a></li>
+        <li><a href="#projekt">Projekt</a></li>
+        <li><a href="#fardigheter">Färdigheter</a></li>
+        <li><a href="#utbildning">Utbildning</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li class="no-print"><button id="theme" class="btn secondary" aria-pressed="false" aria-label="Växla mörkt läge">🌓 Tema</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero" id="content" aria-labelledby="hero-title">
+    <!-- Ersätt DATA_URI_EMBEDDED_HERE nedan med ditt inbäddade foto om du klistrar koden manuellt -->
+    <img src="DATA_URI_EMBEDDED_HERE" alt="Porträtt på Johan Karlsson">
+    <div>
+      <h1 id="hero-title">Johan Karlsson</h1>
+      <p class="meta">GIS-konsult & Earth Observation Specialist · Djursholm, Sverige</p>
+      <p>Erfaren GIS-specialist med 5+ år inom geodataanalys, fjärranalys och karttjänster för miljö- och samhällsbyggnadsprojekt. Van att driva uppdrag från behovsanalys till visualisering och rådgivning i QGIS, ArcGIS och GEE.</p>
+      <div class="cta no-print">
+        <a class="btn" href="#" onclick="window.print()" aria-label="Skriv ut eller spara som PDF">Ladda ner CV (PDF)</a>
+        <a class="btn secondary" id="emailLink" href="#" aria-label="Skicka e-post till Johan Karlsson">E-posta mig</a>
+        <a class="btn secondary" href="https://www.linkedin.com/in/kombagis" rel="me" target="_blank" aria-label="Besök min LinkedIn-profil">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" role="main">
+    <section id="profil" aria-labelledby="profil-title">
+      <h2 id="profil-title">Profil</h2>
+      <p>Erfaren GIS-specialist med 5+ år inom geodataanalys, fjärranalys och karttjänster för miljö- och samhällsbyggnadsprojekt. Van att driva uppdrag från behovsanalys till visualisering och rådgivning i QGIS, ArcGIS och GEE.</p>
+    </section>
+
+    <section id="erfarenhet" aria-labelledby="erfarenhet-title">
+      <h2 id="erfarenhet-title">Erfarenhet</h2>
+      <article>
+        <h3>Earth Observation Specialist · KAYA Global</h3>
+        <p class="meta">2025-01 – Nuvarande · Distans</p>
+        <ul class="clean">
+          <li>Utvecklar och kvalitetssäkrar GIS-baserade karttjänster för miljöövervakning och klimatanpassning.</li>
+          <li>Rådgivning och tekniskt stöd i QGIS och fjärranalys.</li>
+          <li>Samarbeten med myndigheter & forskare för hög datakvalitet.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Egenföretagare – Earth Observation & GIS · Komba GIS AB</h3>
+        <p class="meta">2023-01 – Nuvarande · Stockholm</p>
+        <ul class="clean">
+          <li>Levererat geodataanalyser och kartunderlag till &gt;10 naturvårdsprojekt.</li>
+          <li>Byggt och förvaltat GIS- och databaslösningar som effektiviserat dataflöden.</li>
+          <li>Workshops och expertstöd i QGIS som höjt partnerteams kompetens.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Earth Observation Specialist Consultant · KAYA Climate Solutions</h3>
+        <p class="meta">2023-04 – 2024-12 · Distans (via Komba GIS AB)</p>
+        <ul class="clean">
+          <li>Fjärranalys för återbeskogning och markrestaurering.</li>
+          <li>Biomassaförändring och beslutsunderlag för klimatanpassning.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Remote Sensing – Monitoring & Carbon Forestry · OpenForests</h3>
+        <p class="meta">2020-03 – Nuvarande · Distans (via Komba GIS AB)</p>
+        <ul class="clean">
+          <li>Metoder för att spåra förändringar i skog &amp; vegetation med satellitdata.</li>
+          <li>Expertanalys till klimat- och naturresursprojekt.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projekt" aria-labelledby="projekt-title">
+      <h2 id="projekt-title">Utvalda projekt / case</h2>
+      <div class="grid-2">
+        <article>
+          <h3>Case 1 – <em>Placeholder</em></h3>
+          <p><strong>Problem:</strong> Beskriv kort problemet.</p>
+          <p><strong>Insats:</strong> Vad gjorde du? Metod/verktyg.</p>
+          <p><strong>Resultat:</strong> Mätbart utfall (%, dagar, kr, yta).</p>
+          <p class="meta"><strong>Teknik:</strong> QGIS, GEE, Python</p>
+        </article>
+        <article>
+          <h3>Case 2 – <em>Placeholder</em></h3>
+          <p><strong>Problem:</strong> …</p>
+          <p><strong>Insats:</strong> …</p>
+          <p><strong>Resultat:</strong> …</p>
+          <p class="meta"><strong>Teknik:</strong> QGIS, PostGIS, ArcGIS Online</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fardigheter" aria-labelledby="fard-title">
+      <h2 id="fard-title">Färdigheter</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Teknik</h3>
+          <p>
+            <span class="tag">QGIS (Avancerad)</span>
+            <span class="tag">ArcGIS Pro / AGOL</span>
+            <span class="tag">Google Earth Engine</span>
+            <span class="tag">Python</span>
+            <span class="tag">PostGIS/SQL</span>
+          </p>
+        </div>
+        <div>
+          <h3>Metoder & Domän</h3>
+          <p>
+            <span class="tag">Fjärranalys</span>
+            <span class="tag">Geodataanalys</span>
+            <span class="tag">Kartproduktion</span>
+            <span class="tag">Databashantering</span>
+            <span class="tag">Processutveckling</span>
+            <span class="tag">Strategisk rådgivning</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="utbildning" aria-labelledby="utbildning-title">
+      <h2 id="utbildning-title">Utbildning</h2>
+      <article>
+        <h3>MSc, Primate Conservation – Oxford Brookes University</h3>
+        <p class="meta">2005–2006 · U.K.</p>
+      </article>
+      <article>
+        <h3>Magisterexamen i biologi – Stockholms universitet</h3>
+        <p class="meta">1997–2001 · Stockholm</p>
+      </article>
+    </section>
+
+    <section id="kontakt" aria-labelledby="kontakt-title">
+      <h2 id="kontakt-title">Kontakt</h2>
+      <p class="meta">Telefon: 070-675 49 23 · Ort: Djursholm, Sverige</p>
+      <form class="no-print" id="contactForm" action="https://formspree.io/f/xyylfake" method="POST" aria-describedby="gdpr">
+        <label for="name">Namn</label><br>
+        <input id="name" name="name" type="text" required><br>
+        <label for="email">E-post</label><br>
+        <input id="email" name="email" type="email" required><br>
+        <label for="message">Meddelande</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <p id="gdpr" class="meta">Genom att skicka godkänner du att vi hanterar dina uppgifter för att svara på ditt meddelande.</p>
+        <button class="btn" type="submit">Skicka</button>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Johan Karlsson. Alla rättigheter förbehålls.</p>
+  </footer>
+</div>
+
+<script>
+  // E-postmaskning (mindre spam)
+  (function() {
+    var u = "johan", d = "kombagis.se";
+    var link = document.getElementById('emailLink');
+    var addr = u + "@" + d;
+    link.href = "mailto:" + addr;
+    link.textContent = addr;
+  })();
+  // Tema-toggle
+  (function() {
+    var btn = document.getElementById('theme');
+    var dark = false;
+    btn.addEventListener('click', function() {
+      dark = !dark;
+      document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+      btn.setAttribute('aria-pressed', dark.toString());
+    });
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Johan Karlsson",
+  "jobTitle": "GIS-konsult & Earth Observation Specialist",
+  "address": {"@type":"PostalAddress","addressLocality":"Djursholm","addressCountry":"SE"},
+  "telephone": "070-675 49 23",
+  "email": "johan [at] kombagis.se",
+  "sameAs": ["https://www.linkedin.com/in/kombagis"],
+  "image": "https://example.com/og-image.jpg"
+}
+</script>
+</body>
+</html>
