@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://ulfboge.github.io/johan-cv/sitemap.xml
-
