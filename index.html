@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Johan Karlsson – CV | GIS-konsult & Earth Observation Specialist</title>
-  <meta name="description" content="CV för Johan Karlsson. GIS-konsult & Earth Observation Specialist. Geodataanalys, QGIS, Google Earth Engine, Python.">
+  <meta name="description" content="CV för Johan Karlsson. GIS-konsult med specialistkompetens inom geodataanalys.">
   <link rel="canonical" href="https://ulfboge.github.io/johan-cv/">
   <meta property="og:title" content="Johan Karlsson – GIS-konsult & Earth Observation Specialist">
-  <meta property="og:description" content="Snabb, tillgänglig CV-sida för Johan Karlsson.">
+  <meta property="og:description" content="CV för Johan Karlsson.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ulfboge.github.io/johan-cv/">
   <meta property="og:image" content="portrait.jpg">
@@ -47,10 +47,13 @@
     header {
       position: sticky;
       top: 0;
-      background-color: var(--card);
+      background-color: rgba(255, 255, 255, 0.8);
       border-bottom: 1px solid var(--border);
       z-index: 10;
       backdrop-filter: blur(5px);
+    }
+    [data-theme="dark"] header {
+        background-color: rgba(15, 17, 21, 0.8);
     }
     header nav ul {
       display: flex;
@@ -127,11 +130,6 @@
     .btn:hover {
         transform: translateY(-2px);
     }
-    .btn.secondary {
-      background: transparent;
-      color: var(--accent);
-      border: 2px solid var(--accent);
-    }
     main section {
       padding: 3rem 0;
       border-top: 1px solid var(--border);
@@ -141,36 +139,31 @@
       text-align: center;
       margin: 0 0 2rem;
     }
-    .grid-2 {
+    h3 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    .grid-2, .grid-3, .grid-4 {
       display: grid;
       gap: 2rem;
     }
     @media (min-width: 768px) {
       .grid-2 { grid-template-columns: 1fr 1fr; }
+      .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+      .grid-4 { grid-template-columns: 1fr 1fr; }
       .hero { flex-direction: row; text-align: left; }
-      .hero-text { margin-top: 0; }
+      .hero-text { margin-top: 0; margin-left: 2rem; }
       .cta { justify-content: flex-start; }
     }
     ul.clean {
       padding-left: 1.2rem;
       list-style: disc;
+      margin-top: 0.5rem;
     }
     .meta {
       color: var(--muted);
       font-size: 0.95rem;
       margin-bottom: 0.5rem;
-    }
-    .tag-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
-    }
-    .tag {
-      background-color: var(--border);
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
     }
     footer {
       text-align: center;
@@ -192,8 +185,7 @@
       <ul>
         <li><a href="#profil">Profil</a></li>
         <li><a href="#erfarenhet">Erfarenhet</a></li>
-        <li><a href="#projekt">Projekt</a></li>
-        <li><a href="#fardigheter">Färdigheter</a></li>
+        <li><a href="#kompetenser">Kompetenser</a></li>
         <li><a href="#utbildning">Utbildning</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
         <li><button id="theme" aria-label="Växla mörkt läge">🌓</button></li>
@@ -207,78 +199,126 @@
         <div class="profile-picture"></div>
         <div class="hero-text">
           <h1 id="hero-title">Johan Karlsson</h1>
-          <p class="meta">GIS-konsult & Earth Observation Specialist · Djursholm, Sverige</p>
-          <p>Erfaren GIS-specialist med 5+ år inom geodataanalys, fjärranalys och karttjänster för miljö- och samhällsbyggnadsprojekt. Van att driva uppdrag från behovsanalys till visualisering och rådgivning i QGIS, ArcGIS och GEE.</p>
+          <p class="meta">GIS-konsult med specialistkompetens inom geodataanalys</p>
+          <p>Djursholm | 070-675 49 23 | <a id="emailLink" href="#">johan@kombagis.se</a> | <a href="https://linkedin.com/in/kombagis" target="_blank" rel="noopener noreferrer">linkedin.com/in/kombagis</a></p>
           <div class="cta">
             <a class="btn" href="#" onclick="window.print()" aria-label="Skriv ut eller spara som PDF">Ladda ner CV (PDF)</a>
-            <a class="btn secondary" id="emailLink" href="#">E-post</a>
-            <a class="btn secondary" href="https://www.linkedin.com/in/kombagis" rel="me" target="_blank">LinkedIn</a>
           </div>
         </div>
       </section>
 
       <section id="profil" aria-labelledby="profil-title">
         <h2 id="profil-title">Profil</h2>
-        <p>Jag är en GIS-konsult och Earth Observation Specialist med en passion för att omvandla komplexa geodata till insiktsfulla och användbara kartor och analyser. Med över fem års erfarenhet inom miljö- och samhällsbyggnadssektorn, har jag utvecklat en stark förmåga att leda projekt från start till mål – från behovsanalys och datainsamling till avancerad analys, visualisering och rådgivning. Jag är tekniskt kunnig i verktyg som QGIS, ArcGIS och Google Earth Engine, och trivs i roller där jag får kombinera teknisk expertis med strategiskt tänkande för att lösa verkliga problem.</p>
+        <p>Erfaren GIS-specialist med över 5 års erfarenhet av geodataanalys, databashantering och utveckling av GIS-tjänster för miljö- och samhällsbyggnadsprojekt. Drivs av att hjälpa kunder att arbeta smartare med geodata och omvandla komplexa data till beslutsunderlag som skapar hållbarhetsnytta. Van att leda egna uppdrag, från behovsanalys och datainsamling till visualisering och strategisk rådgivning inom plattformar som QGIS och ArcGIS.</p>
       </section>
 
       <section id="erfarenhet" aria-labelledby="erfarenhet-title">
         <h2 id="erfarenhet-title">Erfarenhet</h2>
-        <div class="grid-2">
+        <div class="grid-4">
           <div>
-            <h3>GIS-konsult</h3>
-            <p class="meta">KombaGIS AB | 2020 – Nuvarande</p>
+            <h3>Earth Observation Specialist</h3>
+            <p class="meta">KAYA Global, Distans | 2025-01 – Nuvarande</p>
             <ul class="clean">
-              <li>Ledde och genomförde GIS-analyser för miljökonsekvensbeskrivningar (MKB) och tillståndsprövningar.</li>
-              <li>Utvecklade och förvaltade webbaserade karttjänster för kommunala och privata kunder.</li>
-              <li>Ansvarade för datainsamling, bearbetning och kvalitetssäkring av geografisk information.</li>
-              <li>Arbetade med fjärranalys och bildbehandling för att övervaka förändringar i landskapet.</li>
+              <li>Utvecklar och kvalitetssäkrar GIS-baserade karttjänster för miljöövervakning och klimatanpassning.</li>
+              <li>Ger strategisk rådgivning och tekniskt stöd till internationella samarbetspartners.</li>
+              <li>Samarbetar med myndigheter och forskare för att säkerställa hög datakvalitet.</li>
             </ul>
           </div>
           <div>
-            <h3>GIS-samordnare</h3>
-            <p class="meta">Naturvårdsverket | 2018 – 2020</p>
+            <h3>Egenföretagare – Earth Observation & GIS</h3>
+            <p class="meta">Komba GIS AB, Stockholm | 2023-01 – Nuvarande</p>
             <ul class="clean">
-              <li>Samordnade myndighetens användning av geodata och GIS-verktyg.</li>
-              <li>Utbildade handläggare i QGIS och andra relevanta program.</li>
-              <li>Utvecklade interna rutiner och mallar för datahantering.</li>
+              <li>Levererade GIS-analyser och kartunderlag till över 10 miljö- och naturvårdsprojekt.</li>
+              <li>Byggde och förvaltade GIS- och databaslösningar som effektiviserade arbetsflöden.</li>
+              <li>Höll i tekniskt expertstöd och workshops i QGIS för projektpartners.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Earth Observation Specialist Consultant</h3>
+            <p class="meta">KAYA Climate Solutions (via Komba GIS AB), Distans | 2023-04 – 2024-12</p>
+            <ul class="clean">
+              <li>Bidrog till utveckling av strategier för återbeskogning och markrestaurering genom fjärranalys.</li>
+              <li>Kartlade förändringar i biomassa och levererade datadrivna underlag för klimatanpassningsåtgärder.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Remote Sensing – Monitoring & Carbon Forestry</h3>
+            <p class="meta">OpenForests (via Komba GIS AB), Distans | 2020-03 – Nuvarande</p>
+            <ul class="clean">
+              <li>Utvecklade och implementerade metoder för att spåra förändringar i skog med satellitdata.</li>
+              <li>Bidrog med expertanalys till klimatprojekt och projekt för hållbart brukande av naturresurser.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section id="projekt" aria-labelledby="projekt-title">
-        <h2 id="projekt-title">Utvalda Projekt</h2>
-        <div class="grid-2">
-          <div>
-            <h3>Vindkraftsetablering i Norrland</h3>
-            <p>Analyserade och visualiserade potentiella områden för vindkraftsetablering med hänsyn till natur- och kulturvärden, infrastruktur och vindförhållanden.</p>
-          </div>
-          <div>
-            <h3>Översvämningskartering med GEE</h3>
-            <p>Använde Google Earth Engine för att analysera satellitdata och kartera översvämningsrisker längs en älv, vilket gav underlag för kommunal planering.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="fardigheter" aria-labelledby="fardigheter-title">
-        <h2 id="fardigheter-title">Färdigheter</h2>
-        <div class="tag-list">
-          <span class="tag">QGIS</span> <span class="tag">ArcGIS Pro</span> <span class="tag">Google Earth Engine</span> <span class="tag">Python</span> <span class="tag">SQL</span> <span class="tag">Fjärranalys</span> <span class="tag">Fotogrammetri</span> <span class="tag">Databas-hantering</span> <span class="tag">Projektledning</span>
+      <section id="kompetenser" aria-labelledby="kompetenser-title">
+        <h2 id="kompetenser-title">Kompetenser</h2>
+        <div class="grid-3">
+            <div>
+                <h3>GIS-plattformar & Verktyg</h3>
+                <ul class="clean">
+                    <li>QGIS (Avancerad)</li>
+                    <li>ArcGIS Pro & Online</li>
+                    <li>Google Earth Engine</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Analys & Datahantering</h3>
+                <ul class="clean">
+                    <li>Geodata & Fjärranalys</li>
+                    <li>Geografiska analyser</li>
+                    <li>Databashantering</li>
+                    <li>Dataflöden & processutveckling</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Verksamhetsstöd & Metodik</h3>
+                <ul class="clean">
+                    <li>Strategisk rådgivning</li>
+                    <li>Förvaltning av GIS-system</li>
+                    <li>Kartproduktion & visualisering</li>
+                    <li>Behovsanalys & kravinsamling</li>
+                </ul>
+            </div>
         </div>
       </section>
 
       <section id="utbildning" aria-labelledby="utbildning-title">
         <h2 id="utbildning-title">Utbildning</h2>
-        <h3>Master i Geografisk Informationsteknologi</h3>
-        <p class="meta">Lunds Universitet | 2016 – 2018</p>
-        <h3>Kandidat i Geovetenskap</h3>
-        <p class="meta">Uppsala Universitet | 2013 – 2016</p>
+        <div class="grid-2">
+            <div>
+                <h3>Master of Science (MSc), Primate Conservation</h3>
+                <p class="meta">Oxford Brookes University, U.K. | 2005-09 – 2006-09</p>
+            </div>
+            <div>
+                <h3>Magisterexamen i biologi</h3>
+                <p class="meta">Stockholms universitet, Stockholm | 1997-09 – 2001-10</p>
+            </div>
+        </div>
+      </section>
+      
+      <section id="sprak" aria-labelledby="sprak-title">
+        <h2 id="sprak-title">Språk</h2>
+        <div class="grid-2" style="text-align: center;">
+            <div>
+                <h3>Svenska</h3>
+                <p class="meta">Modersmål</p>
+            </div>
+            <div>
+                <h3>Engelska</h3>
+                <p class="meta">Flytande i tal och skrift</p>
+            </div>
+        </div>
       </section>
 
       <section id="kontakt" aria-labelledby="kontakt-title">
         <h2 id="kontakt-title">Kontakt</h2>
-        <p style="text-align: center;">Hör gärna av dig om du vill diskutera ett projekt eller en möjlighet. Jag nås enklast via e-post eller LinkedIn.</p>
+        <p style="text-align: center;">Hör gärna av dig! Jag nås enklast via e-post eller telefon.</p>
+        <p style="text-align: center; font-size: 1.2rem; font-weight: 500;">
+            <a id="emailContactLink" href="#">johan@kombagis.se</a> · 070-675 49 23
+        </p>
       </section>
     </main>
 
@@ -291,9 +331,14 @@
     // Email obfuscation
     (function() {
       var u = "johan", d = "kombagis.se";
-      var link = document.getElementById('emailLink');
-      if (link) {
-        link.href = "mailto:" + u + "@" + d;
+      var email = u + "@" + d;
+      var heroLink = document.getElementById('emailLink');
+      if (heroLink) {
+        heroLink.href = "mailto:" + email;
+      }
+      var contactLink = document.getElementById('emailContactLink');
+      if (contactLink) {
+        contactLink.href = "mailto:" + email;
       }
     })();
 
